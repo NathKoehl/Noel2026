@@ -66,6 +66,14 @@
   .tree .star{transform-origin:100px 26px;animation:starPulse 2.4s ease-in-out infinite}
   @keyframes starPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
   @media (max-width:760px){ .tree{height:30vh;left:-14px;bottom:2vh} }
+  @media (max-width:400px){ .tree{height:24vh;left:-18px} }
+  /* téléphone à l'horizontale */
+  @media (max-height:500px) and (orientation:landscape){
+    header{padding-top:10px} header img{width:150px}
+    .kicker{margin-top:6px} .headline{font-size:22px}
+    .gift-wrap{padding-top:34px;transform:scale(.72);transform-origin:50% 0}
+    .tree{height:45vh}
+  }
 
   /* ---------- Le cadeau ---------- */
   .gift{position:relative;width:220px;height:215px;border:0;background:none;cursor:pointer;
