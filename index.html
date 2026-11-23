@@ -324,7 +324,7 @@ const CONFIG = {
     }
   ],
   presence:   "Merci de nous confirmer votre présence à chacun des deux rendez-vous, afin que nous puissions les organiser dans les meilleures conditions.",
-  dateLimite: "Réponse souhaitée avant le 11 décembre",
+  dateLimite: "",     // ex. "Réponse souhaitée avant le 11 décembre" (laisser vide pour ne rien afficher)
   signature:  "Toute la direction de Koëhl Assurances",
   sonActive:  true,   // musique activée par défaut (elle démarre à l'ouverture du cadeau)
   musique:    MUSIQUE_INTEGREE  // « Christmas Song » – AtlasAudio (Pixabay, libre de droits), intégrée au fichier.
@@ -351,6 +351,7 @@ $("events").innerHTML = CONFIG.evenements.map((e, i) => `
   </div>`).join("");
 $("t-presence").textContent = CONFIG.presence;
 $("t-deadline").textContent = CONFIG.dateLimite;
+if (!CONFIG.dateLimite) $("t-deadline").remove();
 $("t-sign").textContent = CONFIG.signature;
 
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
